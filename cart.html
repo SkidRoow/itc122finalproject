@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device width, initial scal=1.0">
+    <title>GearUp</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo1a.png" width="200px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>        
+    </div>
+
+<!--------- cart items details --------->
+
+<div class="small-container cart-page">
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/buy-1.jpg">
+                    <div>
+                        <p>Puma Red Printed T-shirt</p>
+                        <small class="price">Price: $50.00</small>
+                        <br>
+                        <a href="#" class="remove-item btn-danger">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" min="1" value="1" class="quantity cart-quantity-input"></td>
+            <td class="subtotal">$50.00</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/buy-2.jpg">
+                    <div>
+                        <p>Nike Men Black Running Shoes</p>
+                        <small class="price">Price: $80.00</small>
+                        <br>
+                        <a href="#" class="remove-item btn-danger">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" min="1" value="1" class="quantity cart-quantity-input"></td>
+            <td class="subtotal">$80.00</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/buy-3.jpg">
+                    <div>
+                        <p>Adidas Jogger Pants</p>
+                        <small class="price">Price: $50.00</small>
+                        <br>
+                        <a href="#" class="remove-item btn-danger">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" min="1" value="1" class="quantity cart-quantity-input"></td>
+            <td class="subtotal">$50.00</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/buy-4.jpg">
+                    <div>
+                        <p>Puma Women Black Polo Shirt</p>
+                        <small class="price">Price: $55.00</small>
+                        <br>
+                        <a href="#" class="remove-item btn-danger">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" min="1" value="1" class="quantity cart-quantity-input"></td>
+            <td class="subtotal">$55.00</td>
+        </tr>
+    </table>
+    <div class="total-price">
+        <table>
+            <tr>
+                <td>Subtotal</td>
+                <td>$235.00</td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td>$30.00</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>$265.00</td>
+            </tr>
+        </table>
+    </div>
+    <a href="#" class="button" onclick="checkout()">Check Out</a>
+</div>
+
+<!--------- footer --------->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and iOS mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo5a.png">
+                    <p>Our Purpose Is to Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                   <ul>
+                        <li><a href="https://web.facebook.com/profile.php?id=61559201755661" target="_blank">Facebook</a></li>
+                        <li><a href="https://twitter.com/notgearup" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/notgearup/Instagram" target="_blank">Instagram</a></li>
+                   </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+
+<!-------- js for toggle menu -------->
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") 
+                {
+                    MenuItems.style.maxHeight = "200px";
+                } 
+            else
+                {
+                    MenuItems.style.maxHeight = "0px";
+                }    
+        }
+    </script>
+
+<!-------- js for cart -------->
+
+    <script>
+        document.querySelectorAll('.quantity').forEach(function (input) {
+        input.addEventListener('change', function () {
+            if (parseInt(this.value) < 1) {
+                this.value = 1;
+            }
+            updateSubtotal(this);
+        });
+    });
+
+    function updateSubtotal(input) {
+        const price = parseFloat(input.parentElement.previousElementSibling.querySelector('.price').innerText.replace('Price: $', ''));
+        const quantity = parseInt(input.value);
+        const subtotal = price * quantity;
+        input.parentElement.nextElementSibling.innerText = '$' + subtotal.toFixed(2);
+        updateTotal();
+    }
+
+    function updateTotal() {
+        const subtotals = document.querySelectorAll('.subtotal');
+        let subtotal = 0;
+        subtotals.forEach(function (sub) {
+            subtotal += parseFloat(sub.innerText.replace('$', ''));
+        });
+        document.querySelector('.total-price table tr:first-child td:last-child').innerText = '$' + subtotal.toFixed(2);
+        const tax = subtotal * 0.1;
+        const total = subtotal + tax;
+        document.querySelector('.total-price table tr:last-child td:last-child').innerText = '$' + total.toFixed(2);
+    }
+
+    document.querySelectorAll('.remove-item').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            this.closest('tr').remove();
+            updateTotal();
+        });
+    });
+    </script>
+
+<script>
+    function checkout() {
+        alert("Your purchase has been checked out.");
+    }
+</script>
+
+</body>
+</html>
